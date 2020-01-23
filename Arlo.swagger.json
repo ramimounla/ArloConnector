@@ -1,0 +1,453 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Arlo",
+    "description": "Arlo connector",
+    "version": "1.0"
+  },
+  "host": "my.arlo.com",
+  "basePath": "/hmsweb",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/users/devices": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "userId": {
+                        "type": "string",
+                        "description": "userId",
+                        "title": "",
+                        "x-ms-visibility": "important"
+                      },
+                      "deviceId": {
+                        "type": "string",
+                        "description": "deviceId",
+                        "title": "",
+                        "x-ms-visibility": "important"
+                      },
+                      "parentId": {
+                        "type": "string",
+                        "description": "parentId",
+                        "title": "",
+                        "x-ms-visibility": "important"
+                      },
+                      "uniqueId": {
+                        "type": "string",
+                        "description": "uniqueId"
+                      },
+                      "deviceType": {
+                        "type": "string",
+                        "description": "deviceType",
+                        "title": "",
+                        "x-ms-visibility": "important"
+                      },
+                      "deviceName": {
+                        "type": "string",
+                        "description": "deviceName"
+                      },
+                      "lastModified": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "lastModified"
+                      },
+                      "xCloudId": {
+                        "type": "string",
+                        "description": "xCloudId",
+                        "title": "",
+                        "x-ms-visibility": "important"
+                      },
+                      "lastImageUploaded": {
+                        "type": "string",
+                        "description": "lastImageUploaded"
+                      },
+                      "userRole": {
+                        "type": "string",
+                        "description": "userRole"
+                      },
+                      "displayOrder": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "displayOrder"
+                      },
+                      "presignedLastImageUrl": {
+                        "type": "string",
+                        "description": "presignedLastImageUrl"
+                      },
+                      "presignedSnapshotUrl": {
+                        "type": "string",
+                        "description": "presignedSnapshotUrl"
+                      },
+                      "presignedFullFrameSnapshotUrl": {
+                        "type": "string",
+                        "description": "presignedFullFrameSnapshotUrl"
+                      },
+                      "mediaObjectCount": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "mediaObjectCount"
+                      },
+                      "state": {
+                        "type": "string",
+                        "description": "state"
+                      },
+                      "modelId": {
+                        "type": "string",
+                        "description": "modelId"
+                      },
+                      "cvrEnabled": {
+                        "type": "boolean",
+                        "description": "cvrEnabled"
+                      },
+                      "dateCreated": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "dateCreated"
+                      },
+                      "arloMobilePlan": {
+                        "type": "boolean",
+                        "description": "arloMobilePlan",
+                        "title": "",
+                        "x-ms-visibility": "internal",
+                        "enum": [
+                          "",
+                          "true",
+                          "false"
+                        ]
+                      },
+                      "interfaceVersion": {
+                        "type": "string",
+                        "description": "interfaceVersion"
+                      },
+                      "interfaceSchemaVer": {
+                        "type": "string",
+                        "description": "interfaceSchemaVer"
+                      },
+                      "owner": {
+                        "type": "object",
+                        "properties": {
+                          "firstName": {
+                            "type": "string",
+                            "description": "firstName"
+                          },
+                          "lastName": {
+                            "type": "string",
+                            "description": "lastName"
+                          },
+                          "ownerId": {
+                            "type": "string",
+                            "description": "ownerId"
+                          }
+                        },
+                        "description": "owner"
+                      },
+                      "properties": {
+                        "type": "object",
+                        "properties": {
+                          "modelId": {
+                            "type": "string",
+                            "description": "modelId"
+                          },
+                          "olsonTimeZone": {
+                            "type": "string",
+                            "description": "olsonTimeZone"
+                          },
+                          "hwVersion": {
+                            "type": "string",
+                            "description": "hwVersion"
+                          }
+                        },
+                        "description": "properties"
+                      },
+                      "migrateActivityZone": {
+                        "type": "boolean",
+                        "description": "migrateActivityZone"
+                      },
+                      "firmwareVersion": {
+                        "type": "string",
+                        "description": "firmwareVersion"
+                      },
+                      "connectivity": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "type"
+                          },
+                          "connected": {
+                            "type": "boolean",
+                            "description": "connected"
+                          },
+                          "mepStatus": {
+                            "type": "string",
+                            "description": "mepStatus"
+                          }
+                        },
+                        "description": "connectivity"
+                      },
+                      "certAvailable": {
+                        "type": "boolean",
+                        "description": "certAvailable"
+                      },
+                      "automationRevision": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "automationRevision"
+                      }
+                    }
+                  },
+                  "description": "data"
+                },
+                "success": {
+                  "type": "boolean",
+                  "description": "success"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get devices",
+        "description": "Arm camera",
+        "operationId": "devices",
+        "x-ms-visibility": "important",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "x-ms-visibility": "internal",
+            "enum": [
+              "application/json"
+            ]
+          }
+        ]
+      }
+    },
+    "/users/devices/notify/{deviceId}": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Arm",
+        "description": "Arm the hub",
+        "operationId": "arm",
+        "x-ms-visibility": "important",
+        "parameters": [
+          {
+            "name": "deviceId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "x-ms-visibility": "internal",
+            "enum": [
+              "application/json"
+            ]
+          },
+          {
+            "name": "xcloudId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "x-ms-dynamic-values": {
+              "operationId": "devices",
+              "value-path": "xCloudId",
+              "value-collection": "data",
+              "parameters": {
+                "Content-Type": {
+                  "parameter": "xcloudId"
+                }
+              }
+            }
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "from": {
+                  "type": "string",
+                  "description": "from",
+                  "title": "",
+                  "x-ms-visibility": "internal",
+                  "x-ms-dynamic-values": {
+                    "operationId": "devices",
+                    "value-path": "userId",
+                    "value-collection": "data",
+                    "parameters": {
+                      "Content-Type": {
+                        "parameter": "from"
+                      }
+                    }
+                  },
+                  "default": "userId"
+                },
+                "to": {
+                  "type": "string",
+                  "description": "to",
+                  "title": "",
+                  "x-ms-dynamic-values": {
+                    "operationId": "devices",
+                    "value-path": "deviceId",
+                    "value-collection": "data",
+                    "parameters": {
+                      "Content-Type": {
+                        "parameter": "to"
+                      }
+                    }
+                  },
+                  "x-ms-visibility": "important"
+                },
+                "action": {
+                  "type": "string",
+                  "description": "action",
+                  "title": "",
+                  "default": "set",
+                  "enum": [
+                    "set"
+                  ]
+                },
+                "resource": {
+                  "type": "string",
+                  "description": "resource",
+                  "title": "",
+                  "default": "modes",
+                  "x-ms-visibility": "internal",
+                  "enum": [
+                    "modes"
+                  ]
+                },
+                "transId": {
+                  "type": "string",
+                  "description": "transId",
+                  "title": "",
+                  "default": "web!3975ac7b.ebb3a8!1504266382554",
+                  "x-ms-visibility": "important"
+                },
+                "publishResponse": {
+                  "type": "boolean",
+                  "description": "publishResponse",
+                  "title": "",
+                  "enum": [
+                    true
+                  ],
+                  "default": true
+                },
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "active": {
+                      "type": "string",
+                      "description": "active",
+                      "title": "",
+                      "default": "mode1",
+                      "enum": [
+                        "mode1"
+                      ]
+                    }
+                  },
+                  "description": "properties",
+                  "required": [
+                    "active"
+                  ]
+                }
+              },
+              "required": [
+                "action",
+                "properties",
+                "publishResponse",
+                "to",
+                "resource",
+                "transId",
+                "from"
+              ],
+              "x-ms-visibility": "important"
+            },
+            "x-ms-visibility": "important"
+          }
+        ]
+      }
+    },
+    "/login/v2": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Get Token",
+        "operationId": "token",
+        "description": "Generate Authorization Token",
+        "x-ms-visibility": "important",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "description": "email"
+                },
+                "password": {
+                  "type": "string",
+                  "description": "password"
+                }
+              },
+              "x-ms-visibility": "important"
+            },
+            "x-ms-visibility": "important"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "security": [],
+  "tags": []
+}
