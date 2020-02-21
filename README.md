@@ -1,6 +1,9 @@
 # Arlo Connector
 Power Automate Custom Connector to control Arlo devices.
 
+## Release
+Download the latest release from the [release tab](../../releases/latest)
+
 # Screenshots
 ![ARLO bird logo](../../blob/master/screenshot/Arlo.png?raw=true)
 
